@@ -77,10 +77,6 @@
         </form>
      </div>
 
-     <div class="col-lg-12" id="queryresults">
-
-     </div>
-
       <div class="row marketing">
         <div class="col-lg-6">
           <h4>MIDI Linked Data Cloud</h4>
@@ -104,7 +100,7 @@
           <p><a href="https://github.com/midi-ld">Join us now</a> and make your voice (or another instrument) count!</p>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6">          
           <h4>Online MIDI to RDF conversion and linkage to the cloud</h4>
           <p>If you want to convert your MIDIs to Linked Data, and optionally integrate them to the growing MIDI Linked Data cloud, you don't  need to install any software. Just use the online converter <a href="http://midi2rdf.amp.ops.labs.vu.nl/">here</a>!</p>
 
@@ -138,18 +134,7 @@
     var query = $('#query').val();
     console.log(query);
     if (query !== "") {
-      //window.location.href = "http://grlc.io/api/midi-ld/queries/filename_search?query=" + query;
-      $.ajax({
-        type: 'GET',
-        url: "http://grlc.io/api/midi-ld/queries/filename_search.html",
-        data: {
-          query: query
-        },
-        success: function(data) {
-          console.log(data.replace("class=\"sparql\"", "class=\"table table-hover table-condensed col-lg-12\"").replace(/\<pre\>/g, "<p class='truncate'>").replace(/\<\/pre\>/g, "</p>").replace("border=\"1\"", ""));
-          $("#queryresults").html(data.replace("class=\"sparql\"", "class=\"table table-hover table-condensed col-lg-12\"").replace(/\<pre\>/g, "<p class='truncate'>").replace(/\<\/pre\>/g, "</p>").replace("border=\"1\"", ""));
-        }
-      });
+      window.location.href = "http://grlc.io/api/midi-ld/queries/filename_search?query=" + query;
     }
   });
   </script>
