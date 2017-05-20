@@ -134,7 +134,7 @@
     var query = $('#query').val();
     console.log(query);
     if (query !== "") {
-      window.location.href = "http://grlc.io/api/midi-ld/queries/filename_search?query=" + query;
+      window.open("http://grlc.io/api/midi-ld/queries/filename_search?query=" + query, '_blank');
     }
   });
   </script>
