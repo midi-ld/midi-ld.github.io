@@ -1,0 +1,104 @@
+@prefix p2: <http://example.org/> .
+@prefix mid: <http://purl.org/midi-ld/midi#> .
+@prefix mid-note: <http://purl.org/midi-ld/notes/> .
+
+p2:event0 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:84 ;
+	mid:tick  0 ;
+	mid:velocity 127 .
+p2:event1 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:84 ;
+	mid:tick  0 ;
+	mid:velocity 127 .
+p2:event2 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:85 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event3 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:86 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event4 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:87 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event5 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:88 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event6 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:89 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event7 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:90 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event8 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:91 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event9 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:92 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event10 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:93 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event11 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:94 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event12 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:95 ;
+	mid:tick 20 ;
+	mid:velocity 127 .
+p2:event13 a mid:NoteOnEvent; 
+	mid:channel 14 ;
+	mid:note mid-note:59 ;
+	mid:tick 580 ;
+	mid:velocity 127 .
+p2:event14 a mid:NoteOnEvent; 
+	mid:channel 14 ;
+	mid:note mid-note:59 ;
+	mid:tick 400 ;
+	mid:velocity  0 .
+p2:event15 a mid:NoteOnEvent; 
+	mid:channel 15 ;
+	mid:note mid-note:84 ;
+	mid:tick 400 ;
+	mid:velocity  0 .
+mid:pianoHeadertrack01 a mid:Track ; 
+    mid:hasEvent p2:event0,
+		p2:event1,
+		p2:event2,
+		p2:event3,
+		p2:event4,
+		p2:event5,
+		p2:event6,
+		p2:event7,
+		p2:event8,
+		p2:event9,
+		p2:event10,
+		p2:event11,
+		p2:event12,
+		p2:event13,
+		p2:event14,
+		p2:event15 .
+		
+mid:mypattern a mid:Pattern ;
+	mid:hasTrack mid:pianoHeadertrack01 .
